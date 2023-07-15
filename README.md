@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+need to run below command to make setup after cloning
 
-Things you may want to cover:
+bundle install
+rake db:migate
+rake db:seed
 
-* Ruby version
+ to test in postman
+to create user
+ post http://localhost:3000/users?user_name=gtest&name=gaurav&email=gaurav@gmail.com&password=gaurav123
 
-* System dependencies
+ to login 
 
-* Configuration
+post http://localhost:3000/auth/login?username=user1&password=gaurav123&email=user1@gmail.com
 
-* Database creation
+in header need to pass Authorization token for below API
 
-* Database initialization
+to get json for all library
+get http://localhost:3000/libraries
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+to get availabe book
 
-* ...
+get http://localhost:3000/libraries/available_books
+
+to get checout books
+get http://localhost:3000/libraries/checked_out_books
+
+
+
+
+
+ 
